@@ -7,7 +7,7 @@ export default function Home() {
         <title>Home - Joanita Festa com Arte</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      
+      Home
 
     </div>
   )
