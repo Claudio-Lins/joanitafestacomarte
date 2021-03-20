@@ -1,7 +1,7 @@
 
 const Layout = ({ children }) => {
     return (
-        <div className="antialiased mt-16 bg-white text-gray-900 flex justify-center min-h-screen">
+        <div className="antialiased bg-white min-h-screen">
             { children }
         </div>
     );
