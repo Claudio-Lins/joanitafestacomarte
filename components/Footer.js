@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="sm:hidden flex items-center fixed h-12 rounded-t-xl shadow-md bg-red-200 w-full bottom-0">
       <div className="mt-1 mx-auto cursor-pointer">
-        <Link href="/">
+        <Link href="/garelia">
         <Image
         src="/footer/instagram.svg"
         alt="Instagram"
@@ -15,7 +15,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="mt-1 mx-auto cursor-pointer">
-        <Link href="/">
+        <Link href="/quem-somos">
         <Image
         src="/footer/whatsup.svg"
         alt="Whatsup"
