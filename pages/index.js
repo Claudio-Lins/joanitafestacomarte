@@ -7,7 +7,10 @@ export default function Home() {
         <title>Home - Joanita Festa com Arte</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      
+      <div className='text-[#c2c2c2] text-[500px]'>
       Home
+      </div>
 
     </div>
   )
