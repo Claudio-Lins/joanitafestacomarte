@@ -30,7 +30,7 @@ export default function Login() {
                   width={22}
                 />
                 <input
-                  className="text-sm ml-4 font-light outline-none h-12 text-red-800 placeholder-red-800"
+                  className="text-sm ml-4 font-light outline-none h-12 text-red-800 placeholder-red-800 w-full"
                   placeholder="E-mail"
                 />
               </div>
@@ -39,25 +39,14 @@ export default function Login() {
                 <button>Enviar</button>
               </div>
             </form>
-          <div className="py-6 text-center text-sm text-red-800">
-            <Link href="/criar-conta">
-              <a>Criar conta</a>
-            </Link>
-          </div>
+            <div className="py-6 text-center text-sm text-red-800">
+              <Link href="/criar-conta">
+                <a>Criar conta</a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     </>
   );
-}
-
-{
-  /* 
-  <div className="max-h-screen py-10">
-              
-                
-                
-              </div>
-            </div> 
-          */
 }

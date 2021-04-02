@@ -11,7 +11,7 @@ export default function CreateAccount() {
       </Head>
       
       <div className=''>
-        <div className="flex justify-center items-center tracking-wide text-white bg-red-800 w-full h-[90px] top-0">
+        <div className="flex justify-center items-center tracking-wide text-white bg-red-800 w-full h-[90px] lg:h-[200px] top-0">
           <h1 className="text-5xl font-Lobster">Bem-vinda</h1>
         </div>
 
