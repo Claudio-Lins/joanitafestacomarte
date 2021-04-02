@@ -25,7 +25,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="bg-red-200 rounded-full p-2 mx-auto pb-6 cursor-pointer">
-        <Link href="/">
+        <Link href="/products/product">
         <Image
         src="/assets/joaninha.svg"
         alt="Joaninha - Lady Bug"

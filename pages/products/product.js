@@ -63,7 +63,7 @@ export default function Product() {
               </div>
               <div className="p-2 rounded-md shadow-md">
                 <Image
-                  src="/products/product04.jpg"
+                  src="/products/product05.jpg"
                   alt="Produtos"
                   layout="responsive"
                   width={120}
