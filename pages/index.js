@@ -8,7 +8,7 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       
-      <div className='text-[#c2c2c2] text-[500px]'>
+      <div className='text-[#c2c2c2] text-lg'>
       Home
       </div>
 
