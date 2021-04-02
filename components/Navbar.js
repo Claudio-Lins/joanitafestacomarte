@@ -5,7 +5,7 @@ import Image from "next/image";
 //return (
 const Navbar = () => {
   return (
-    <div className="py-16">
+    <div className="py-12 md:py-16">
       <nav className="bg-red-200 shadow-md z-10 py-4 fixed top-0 inset-x-0 rounded-b-xl">
         <div className="max-w-5xl px-4 mx-auto">
           <div className="flex justify-between">
