@@ -8,8 +8,8 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       
-      <div className='text-[#c2c2c2] text-lg'>
-      Home
+      <div className='text-[#fff] text-lg'>
+      <h1 className='btn'>Home</h1>
       </div>
 
     </div>
