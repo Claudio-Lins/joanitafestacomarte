@@ -30,11 +30,11 @@ const SliderDestak = () => {
     <>
       <section className="relative flex flex-col justify-center items-center">
         <FaArrowAltCircleLeft
-          className="absolute  flex text-2xl text-gray-200 left-4 z-10 cursor-pointer hover:text-red-800"
+          className="absolute  flex text-4xl text-gray-200 left-4 z-10 cursor-pointer hover:text-red-800"
           onClick={prevSlide}
         />
         <FaArrowAltCircleRight
-          className="absolute  flex text-2xl text-gray-200 right-4 z-10 cursor-pointer hover:text-red-800"
+          className="absolute  flex text-4xl text-gray-200 right-4 z-10 cursor-pointer hover:text-red-800"
           onClick={nextSlide}
         />
 

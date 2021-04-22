@@ -19,7 +19,7 @@ const Navbar = () => {
                 />
               </div>
               <div className="flex">
-                <div className="hidden md:flex space-x-6 justify-around font-nunito font-medium">
+                <div className="hidden md:flex space-x-6 justify-around font-nunito font-light text-gray-800">
                   {/* Home */}
                   <div className="">
                     <Link href="/">
@@ -29,15 +29,7 @@ const Navbar = () => {
                     </Link>
                   </div>
                   {/*  */}
-                  {/* Galeria */}
-                  <div className="">
-                    <Link href="/galeria">
-                      <a className="hover:text-red-700">
-                        <h3>Galeria</h3>
-                      </a>
-                    </Link>
-                  </div>
-                  {/*  */}
+                  
                   {/* Quem Somos */}
                   <div className="">
                     <Link href="/quem-somos">
@@ -47,44 +39,16 @@ const Navbar = () => {
                     </Link>
                   </div>
                   {/*  */}
-                  {/* Temas */}
+                  {/* Depoimentos */}
                   <div className="">
-                    <Link href="#">
+                    <Link href="/depoimentos">
                       <a className="hover:text-red-700">
-                        <h3>Temas</h3>
+                        <h3>Depoimentos</h3>
                       </a>
                     </Link>
                   </div>
                   {/*  */}
-                  {/* Loja */}
-                  <div className="">
-                    <Link href="#">
-                      <a className="hover:text-red-700">
-                        <h3>Loja</h3>
-                      </a>
-                    </Link>
-                  </div>
-                  {/*  */}
-
-                  {/* Contact */}
-                  <div className="">
-                    <Link href="#">
-                      <a className="hover:text-red-700">
-                        <h3>Contacto</h3>
-                      </a>
-                    </Link>
-                  </div>
-                  {/*  */}
-
-                  {/* Login */}
-                  <div className="">
-                    <Link href="/login">
-                      <a className="hover:text-red-700">
-                        <h3>Login</h3>
-                      </a>
-                    </Link>
-                  </div>
-                  {/*  */}
+                
                 </div>
               </div>
             </div>
@@ -109,15 +73,7 @@ const Navbar = () => {
               </Link>
             </div>
             {/*  */}
-            {/* Galeria */}
-            <div className="">
-              <Link href="/galeria">
-                <a className="hover:text-red-700">
-                  <h3>Galeria</h3>
-                </a>
-              </Link>
-            </div>
-            {/*  */}
+            
             {/* Quem Somos */}
             <div className="">
               <Link href="/quem-somos">
@@ -127,44 +83,16 @@ const Navbar = () => {
               </Link>
             </div>
             {/*  */}
-            {/* Temas */}
+            {/* depoimentos */}
             <div className="">
-              <Link href="#">
+              <Link href="/depoimentos">
                 <a className="hover:text-red-700">
-                  <h3>Temas</h3>
+                  <h3>Depoimentos</h3>
                 </a>
               </Link>
             </div>
             {/*  */}
-            {/* Loja */}
-            <div className="">
-              <Link href="#">
-                <a className="hover:text-red-700">
-                  <h3>Loja</h3>
-                </a>
-              </Link>
-            </div>
-            {/*  */}
-
-            {/* Contact */}
-            <div className="">
-              <Link href="#">
-                <a className="hover:text-red-700">
-                  <h3>Contacto</h3>
-                </a>
-              </Link>
-            </div>
-            {/*  */}
-
-            {/* Login */}
-            <div className="">
-              <Link href="/login">
-                <a className="hover:text-red-700">
-                  <h3>Login</h3>
-                </a>
-              </Link>
-            </div>
-            {/*  */}
+            
           </div>
         </div>
       </nav>
