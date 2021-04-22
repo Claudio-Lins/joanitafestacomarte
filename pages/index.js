@@ -1,15 +1,16 @@
 import Head from 'next/head'
+import SliderDestak from '../components/DestakHome'
 
-export default function Home() {
+export default function Home({destak}) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex items-center justify-center py-10">
       <Head>
         <title>Home - Joanita Festa com Arte</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       
-      <div className='text-[#fff] text-lg'>
-      <h1 className='btn'>Home</h1>
+      <div className='w-full shadow-lg rounded-md md:w-2/3 lg:w-[1280px] lg:h-[700px]'>
+      <SliderDestak destak={destak} />
       </div>
 
     </div>
