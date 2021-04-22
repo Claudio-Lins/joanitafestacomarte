@@ -40,13 +40,13 @@ const Navbar = () => {
                   </div>
                   {/*  */}
                   {/* Depoimentos */}
-                  <div className="">
+                  {/* <div className="">
                     <Link href="/depoimentos">
                       <a className="hover:text-red-700">
                         <h3>Depoimentos</h3>
                       </a>
                     </Link>
-                  </div>
+                  </div> */}
                   {/*  */}
                 
                 </div>
