@@ -6,7 +6,7 @@ const SliderDestak = () => {
   const [destak, setDestak] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1337/destaks")
+    fetch("https://stark-plains-02404.herokuapp.com/destaks")
       .then((response) => response.json())
       .then((data) => setDestak(data));
   }, []);
@@ -52,8 +52,8 @@ const SliderDestak = () => {
                     <div>
                       <Image
                         className="rounded-lg object-cover"
-                        src={destak.Cover.url}
-                        alt={destak.Title}
+                        src={destak.cover.url}
+                        alt={destak.title}
                         width={680}
                         height={680}
                       />
