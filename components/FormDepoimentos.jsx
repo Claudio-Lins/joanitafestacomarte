@@ -33,7 +33,7 @@ export default class FormDepoimentos extends React.Component {
 
     const uploas_res = await axios({
       method: "POST",
-      url: "http://localhost:1337/upload",
+      url: "https://stark-plains-02404.herokuapp.com/upload",
       data,
       onUploadProgress: (progress) =>
         this.setState({
