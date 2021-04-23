@@ -6,7 +6,7 @@ export default function Home({destak}) {
     <div className="flex flex-col items-center justify-center py-10">
       <Head>
         <title>Home - Joanita Festa com Arte</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/assets/joaninha-512.ico" />
       </Head>
       
       <div className='w-full shadow-xl rounded-md md:w-2/3 lg:w-[1280px] lg:h-[700px]'>

@@ -10,30 +10,36 @@ const Navbar = () => {
         <div className="max-w-5xl px-4 mx-auto">
           <div className="flex justify-between">
             <div className="flex items-center space-x-12 md:mx-auto">
-              <div>
-                <Image
-                  src="/assets/lg-joanita-hor-180x68.svg"
-                  alt="Algoritmo Digital"
-                  width={180}
-                  height={68}
-                />
+              {/* Home */}
+              <div className="">
+                <Link href="/">
+                  <a className="hover:animate-pulse">
+                    <Image
+                      src="/assets/lg-joanita-hor-180x68.svg"
+                      alt="Joanita Festa com Arte"
+                      width={180}
+                      height={68}
+                    />
+                  </a>
+                </Link>
               </div>
+              {/*  */}
               <div className="flex">
                 <div className="hidden md:flex space-x-6 justify-around font-nunito font-light text-gray-800">
                   {/* Home */}
                   <div className="">
                     <Link href="/">
-                      <a className="hover:text-red-700">
+                      <a className="hover:text-red-700 hover:font-bold">
                         <h3>Home</h3>
                       </a>
                     </Link>
                   </div>
                   {/*  */}
-                  
+
                   {/* Quem Somos */}
                   <div className="">
                     <Link href="/quem-somos">
-                      <a className="hover:text-red-700">
+                      <a className="hover:text-red-700 hover:font-bold">
                         <h3>Quem Somos</h3>
                       </a>
                     </Link>
@@ -48,7 +54,6 @@ const Navbar = () => {
                     </Link>
                   </div> */}
                   {/*  */}
-                
                 </div>
               </div>
             </div>
@@ -73,7 +78,7 @@ const Navbar = () => {
               </Link>
             </div>
             {/*  */}
-            
+
             {/* Quem Somos */}
             <div className="">
               <Link href="/quem-somos">
@@ -92,7 +97,6 @@ const Navbar = () => {
               </Link>
             </div>
             {/*  */}
-            
           </div>
         </div>
       </nav>

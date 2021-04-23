@@ -1,27 +1,34 @@
 import Image from "next/image";
+import Head from "next/head";
 
 const QuemSomos = () => {
   return (
-    <div className="min-w-full container md:p-4">
-      <div className="relative bg-white mb-10 mx-auto items-center md:grid md:grid-cols-2 lg:w-2/4 md:border md:mt-20 md:rounded-xl md:shadow-md  overflow-hidden">
-        <div className="">
-          <div className="flex justify-center mt-4">
-            <Image
-              className="mx-auto"
-              src="/quem-somos/karen-hermann.JPG"
-              alt="Karen Hermann"
-              quality="high"
-              width={283}
-              height={380}
-            />
+    <>
+      <Head>
+        <title>Quem Somos - Joanita Festa com Arte</title>
+        <link rel="icon" href="/assets/joaninha-512.ico" />
+      </Head>
+
+      <div className="min-w-full container md:p-4">
+        <div className="relative bg-white mb-10 mx-auto items-center md:grid md:grid-cols-2 lg:w-2/4 md:border md:mt-20 md:rounded-xl md:shadow-md  overflow-hidden">
+          <div className="">
+            <div className="flex justify-center mt-4">
+              <Image
+                className="mx-auto"
+                src="/quem-somos/karen-hermann.JPG"
+                alt="Karen Hermann"
+                quality="high"
+                width={283}
+                height={380}
+              />
+            </div>
+            <div className="bg-red-200 py-1 rounded-tr-xl">
+              <h2 className=" text-red-800 font-Lobster text-4xl text-center">
+                Karen Hermann
+              </h2>
+            </div>
           </div>
-          <div className="bg-red-200 py-1 rounded-tr-xl">
-            <h2 className=" text-red-800 font-Lobster text-4xl text-center">
-              Karen Hermann
-            </h2>
-          </div>
-        </div>
-        <div className='px-8 py-8 flex items-center'>
+          <div className="px-8 py-8 flex items-center">
             <p className=" text-xs font-Poppins leading-6 tracking-wide">
               Eu sou a Karen, a cara por trás da Juanita. Sou formada em
               Publicidade, mas desde criança sempre gostei muito de artes
@@ -36,20 +43,22 @@ const QuemSomos = () => {
               precisamos de coisas práticas, mas também queremos tudo lindo e
               especial para os nossos filhos.
               <br />
-              <br /> <p className='font-bold'>Assim surgiu o carro chefe da Joanita</p>
+              <br />{" "}
+              <p className="font-bold">Assim surgiu o carro chefe da Joanita</p>
             </p>
           </div>
-      </div>
-          <div className='absolute'>
+        </div>
+        <div className="absolute">
           <Image
-              className="mx-auto"
-              src="/assets/joaninha.svg"
-              alt="Karen Hermann"
-              width={25}
-              height={30}
-            />
-          </div>
-    </div>
+            className="mx-auto"
+            src="/assets/joaninha.svg"
+            alt="Karen Hermann"
+            width={25}
+            height={30}
+          />
+        </div>
+      </div>
+    </>
   );
 };
 

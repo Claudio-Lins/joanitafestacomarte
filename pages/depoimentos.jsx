@@ -1,14 +1,13 @@
 import Head from "next/head";
-import FormDepoimentos from '../components/FormDepoimentos'
 import Image from "next/image";
-import Link from "next/link";
+import FormDepoimentos from '../components/FormDepoimentos'
+
 
 export default function Login() {
   return (
     <>
       <Head>
-        <title>Login - Joanita Festa com Arte</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <title>Depopimentos - Joanita Festa com Arte</title>
       </Head>
 
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -19,9 +18,14 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="lg:flex lg:min-h-screen lg:items-center p-6 md:p-12 lg:p-24 xl:p-48">
-          <div className="flex-grow mx-auto text-center text-red-800">
-            
+        <div className="lg:flex min-h-screen lg:items-center p-6 md:p-12 lg:p-24 xl:p-48">
+          <div className="flex-grow mx-auto text-center text-red-800 space-y-12">
+          <Image
+                      src="/assets/joaninha-512.svg"
+                      alt="Joanita Festa com Arte"
+                      width={300}
+                      height={100}
+                    />
             <FormDepoimentos />
             
           </div>
