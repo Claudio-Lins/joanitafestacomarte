@@ -9,7 +9,7 @@ export default function Depoimentos({ depoimentos }) {
         </div>
         <div className="p-4 md:flex md:container justify-evenly mx-auto space-x-6">
           {depoimentos &&
-            depoimentos.slice(0, 3).map((depoimentos) => (
+            depoimentos.slice(0, 1).map((depoimentos) => (
               <div key={depoimentos.id}>
                 <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
                   <div className="flex justify-center md:justify-center -mt-16">
