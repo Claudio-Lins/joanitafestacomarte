@@ -53,8 +53,8 @@ const SliderDepoimentosMob = () => {
                       <div className="font-Lobster text-5xl text-center">
                         <h2>Depoimentos</h2>
                       </div>
-                      <div className="p-4 md:flex md:container justify-evenly mx-auto space-x-6">
-                        <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+                      <div className="py-4 px-7 md:flex md:container justify-evenly mx-auto">
+                        <div className="max-w-md py-2 px-4 bg-white shadow-lg rounded-lg my-20">
                           <div className="flex justify-center md:justify-center -mt-16">
                             <Image
                               className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"

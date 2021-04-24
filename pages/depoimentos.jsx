@@ -36,7 +36,14 @@ export default function Depoimentos() {
           
           <div className="md:w-3/4 mx-auto">
             <div className="text-center text-green-800 mt-4">
-              
+            <div className="mb-6 mx-auto text-center text-red-800">
+            <Image
+              src="/assets/008-woman-2.svg"
+              alt="Joanita Festa com Arte"
+              width={250}
+              height={100}
+            />
+          </div>
               <FileUpload />
             </div>
           </div>
