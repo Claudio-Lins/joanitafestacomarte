@@ -25,7 +25,7 @@ export default function Home({ destak, depoimentos }) {
 export async function getStaticProps() {
   // Run API calls in parallel
   const [depoimentos] = await Promise.all([
-    fetchAPIDepoimentos("/depoimentos"),
+    fetchAPIDepoimentos(),
   ]);
 
   return {
