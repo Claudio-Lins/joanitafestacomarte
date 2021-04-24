@@ -30,11 +30,11 @@ const SliderDepoimentosMob = () => {
     <>
       <section className="relative flex flex-col justify-center items-center">
         <FaArrowAltCircleLeft
-          className="absolute  flex text-3xl text-gray-200 left-2 mt-9 z-10 cursor-pointer hover:text-red-800"
+          className="absolute  flex text-3xl text-gray-200 left-2 md:-left-2 mt-9 z-10 cursor-pointer hover:text-red-800"
           onClick={prevSlide}
         />
         <FaArrowAltCircleRight
-          className="absolute  flex text-3xl text-gray-200 right-2 mt-9 z-10 cursor-pointer hover:text-red-800"
+          className="absolute  flex text-3xl text-gray-200 right-2 md:-right-2 mt-9 z-10 cursor-pointer hover:text-red-800"
           onClick={nextSlide}
         />
 
