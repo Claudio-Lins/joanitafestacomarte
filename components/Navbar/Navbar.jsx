@@ -28,11 +28,19 @@ const Navbar = ({ toggle }) => {
               height={25}
             />
           </div>
-          <div className="pr-8 space-x-4 font-Nunito font-semibold hover:text-red-700 hover:font-bold md:block hidden">
-            <Link href="/">Home</Link>
-            <Link href="/quem-somos">Quem Somos</Link>
+          <div className="flex pr-8 space-x-4 font-Nunito font-semibold md:block hidden">
+            <Link href="/">
+              <a className=" inline-block hover:text-red-900 hover:font-bold">
+                Home
+              </a>
+            </Link>
+            <Link href="/quem-somos">
+              <a className=" inline-block hover:text-red-900 hover:font-bold">
+                Quem Somos
+              </a>
+            </Link>
           </div>
-          <div className="pr-8 cursor-pointer">
+          <div className="flex pr-8 cursor-pointer">
             <Link href="https://www.instagram.com/joanitafestacomarte/">
               <Image
                 src="/footer/instagram.svg"
