@@ -15,7 +15,7 @@ export default function Home({ destak, depoimentos }) {
         <SliderDestak destak={destak} />
       </div>
     
-      <div className="md:flex w-full h-auto justify-center items-center bg-red-200">
+      <div className="mt-8 md:flex w-full h-auto justify-center items-center bg-red-200">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
     </div>

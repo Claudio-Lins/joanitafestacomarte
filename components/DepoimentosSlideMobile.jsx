@@ -50,7 +50,7 @@ const SliderDepoimentosMob = () => {
                 {index === current && (
                   <>
                     <div className="flex flex-col justify-center mt-10">
-                      <div className="font-Lobster text-5xl text-center">
+                      <div className="font-Lobster text-5xl lg:text-6xl text-center">
                         <h2>Depoimentos</h2>
                       </div>
                       <div className="py-4 px-7 md:flex md:container justify-evenly mx-auto">
