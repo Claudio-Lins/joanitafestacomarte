@@ -5,8 +5,8 @@ import Image from "next/image";
 const Navbar = ({ toggle }) => {
   return (
     <>
-      <div className="bg-red-200">
-        <nav
+      <nav className="bg-red-200">
+        <div
           className="container mx-auto flex items-center justify-between h-20 bg-red-200 relative shadow-sm"
           role="navigation"
         >
@@ -50,8 +50,8 @@ const Navbar = ({ toggle }) => {
               />
             </Link>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </>
   );
 };
