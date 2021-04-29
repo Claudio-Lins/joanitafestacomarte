@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import Image from "next/image";
 
-const SliderDestak = () => {
-  const [destak, setDestak] = useState([]);
+const DestakHome = ({image}) => {
+  // const [destak, setDestak] = useState([]);
 
-  useEffect(() => {
-    fetch("https://joanita-api.herokuapp.com/destaks")
-      .then((response) => response.json())
-      .then((data) => setDestak(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://joanita-api.herokuapp.com/destaks")
+  //     .then((response) => response.json())
+  //     .then((data) => setDestak(data));
+  // }, []);
 
   const [current, setCurrent] = useState(0);
-  const length = destak.length;
+  const length = image.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -22,7 +22,7 @@ const SliderDestak = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  if (!Array.isArray(destak) || destak.length <= 0) {
+  if (!Array.isArray(image) || image.length <= 0) {
     return null;
   }
 
@@ -38,7 +38,7 @@ const SliderDestak = () => {
           onClick={nextSlide}
         />
 
-        {destak.map((destak, index) => {
+        {image.map((image, index) => {
           return (
             <>
               <div
@@ -52,8 +52,8 @@ const SliderDestak = () => {
                     <div>
                       <Image
                         className="rounded-lg object-cover"
-                        src={destak.Cover.url}
-                        alt={destak.Title}
+                        src={image.Cover.url}
+                        alt={image.Title}
                         width={680}
                         height={680}
                       />
@@ -66,7 +66,7 @@ const SliderDestak = () => {
         })}
       </section>
       <section className="relative flex flex-col justify-center items-center">
-        {destak.map((destak, index) => {
+        {image.map((image, index) => {
           return (
             <>
               <div
@@ -77,7 +77,6 @@ const SliderDestak = () => {
               >
                 {index === current && (
                   <>
-                    {/* <div>{destak.Title}</div> */}
                   </>
                 )}
               </div>
@@ -89,4 +88,4 @@ const SliderDestak = () => {
   );
 };
 
-export default SliderDestak;
+export default DestakHome;
