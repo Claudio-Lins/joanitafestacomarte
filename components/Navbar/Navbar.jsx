@@ -40,7 +40,7 @@ const Navbar = ({ toggle }) => {
               </a>
             </Link>
           </div>
-          <div className="flex pr-8 cursor-pointer">
+          {/* <div className="flex pr-8 cursor-pointer">
             <Link href="https://www.instagram.com/joanitafestacomarte/">
               <Image
                 src="/footer/instagram.svg"
@@ -49,7 +49,7 @@ const Navbar = ({ toggle }) => {
                 height={25}
               />
             </Link>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>

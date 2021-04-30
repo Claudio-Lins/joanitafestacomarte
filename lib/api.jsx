@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 export function getURLDepoimentos(path = "") {
-    return `${process.env.API_URL_DEPOIMENTOS || "https://joanita-api.herokuapp.com"}${path}`;
+    return `${process.env.API_URL_JOANITA || "https://joanita-api.herokuapp.com"}${path}`;
   }
   export async function fetchAPIDepoimentos(path) {
     const requestUrl = getURLDepoimentos(path);

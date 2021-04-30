@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import Image from "next/image";
 
-const SliderDepoimentosMob = () => {
-  const [depoimentos, setdepoimentos] = useState([]);
+const DepoimentosSlideMobile = ({depoimentos}) => {
+  // const [depoimentos, setdepoimentos] = useState([]);
 
-  useEffect(() => {
-    fetch("https://joanita-api.herokuapp.com/depoimentos")
-      .then((response) => response.json())
-      .then((data) => setdepoimentos(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://joanita-api.herokuapp.com/depoimentos")
+  //     .then((response) => response.json())
+  //     .then((data) => setdepoimentos(data));
+  // }, []);
 
   const [current, setCurrent] = useState(0);
   const length = depoimentos.length;
@@ -101,4 +101,4 @@ const SliderDepoimentosMob = () => {
   );
 };
 
-export default SliderDepoimentosMob;
+export default DepoimentosSlideMobile;

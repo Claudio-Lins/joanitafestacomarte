@@ -2,9 +2,8 @@ import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
 import { fetchAPIDepoimentos, fetchAPIDestaks } from "../lib/api";
-// import SliderDestak from "../components/DestakHome";
 
-export default function Home({ destak, depoimentos, image }) {
+export default function Home({ depoimentos, image }) {
   return (
     <div className="flex flex-col items-center justify-center py-10">
       <Head>
@@ -27,7 +26,7 @@ export default function Home({ destak, depoimentos, image }) {
 ////////////////////////////////////////////////////////////////
 export async function getStaticProps() {
   const [depoimentos, image] = await Promise.all([
-    fetchAPIDepoimentos(),
+    fetchAPIDepoimentos("/depoimentos"),
     fetchAPIDestaks("/destaks"),
   ]);
 
