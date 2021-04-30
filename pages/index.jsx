@@ -5,7 +5,7 @@ import { fetchAPIDepoimentos, fetchAPIDestaks } from "../lib/api";
 
 export default function Home({ depoimentos, image }) {
   return (
-    <div className="flex flex-col items-center justify-center py-10">
+    <div className="flex flex-col items-center justify-center py-24">
       <Head>
         <title>Home - Joanita Festa com Arte</title>
         <link rel="icon" href="/assets/joaninha-512.ico" />
