@@ -7,7 +7,7 @@ const Navbar = ({ toggle }) => {
     <>
       <nav className="bg-red-200 fixed inset-x-0 z-50">
         <div
-          className="container mx-auto flex items-center justify-between h-20 bg-red-200 relative shadow-sm"
+          className="container mx-auto flex items-center justify-between md:justify-evenly h-20 bg-red-200 relative shadow-sm"
           role="navigation"
         >
           <Link href="/">
