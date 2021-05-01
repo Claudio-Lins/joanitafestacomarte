@@ -1,7 +1,7 @@
 import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
-import { fetchAPIDepoimentos, fetchAPIDestaks } from "../lib/api";
+import { fetchAPIJoanita} from "../lib/api";
 
 export default function Home({ depoimentos, image }) {
   return (
@@ -13,10 +13,9 @@ export default function Home({ depoimentos, image }) {
 
       <div className="w-full shadow-xl rounded-md md:w-2/3 lg:w-[1280px] lg:h-[700px]">
         <DestakHome image={image} />
-        {/* <SliderDestak destak={destak} /> */}
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center items-center bg-red-200">
+      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
     </div>
@@ -26,12 +25,13 @@ export default function Home({ depoimentos, image }) {
 ////////////////////////////////////////////////////////////////
 export async function getStaticProps() {
   const [depoimentos, image] = await Promise.all([
-    fetchAPIDepoimentos("/depoimentos"),
-    fetchAPIDestaks("/destaks"),
+    fetchAPIJoanita("/depoimentos"),
+    fetchAPIJoanita("/destaks"),
   ]);
-
+  
   return {
     props: { depoimentos, image },
     revalidate: 1,
   };
 }
+////////////////////////////////////////////////////////////////
