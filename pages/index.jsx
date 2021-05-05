@@ -1,9 +1,19 @@
+import React, { useState } from "react";
+import Image from "next/image";
 import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
-import { fetchAPIJoanita} from "../lib/api";
+import { fetchAPIJoanita } from "../lib/api";
+import { ModalArca } from "../components/Temas/ArcaDeNoe/ModalArca";
 
 export default function Home({ depoimentos, image }) {
+  ///////MODAL////////////////////////////////
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+  ////////////////////////////////////////////
   return (
     <div className="flex flex-col items-center justify-center py-24">
       <Head>
@@ -18,6 +28,21 @@ export default function Home({ depoimentos, image }) {
       <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
+
+      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-white">
+        <div className="grid grid-cols-3 space-x-4 mx-auto">
+          <div className="">
+            <button className="p-2 rounded-md shadow-lg" onClick={openModal}>
+              <Image
+                src="/temas/arca-de-noe/arca-imagem.png"
+                width={100}
+                height={100}
+              />
+            </button>
+            <ModalArca showModal={showModal} setShowModal={setShowModal} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -28,7 +53,7 @@ export async function getStaticProps() {
     fetchAPIJoanita("/depoimentos"),
     fetchAPIJoanita("/destaks"),
   ]);
-  
+
   return {
     props: { depoimentos, image },
     revalidate: 1,

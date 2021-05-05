@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
+  
+  // NAV BAR //////////////////////////////////
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => { 
     setIsOpen(!isOpen);
@@ -24,6 +26,7 @@ function MyApp({ Component, pageProps }) {
       window.removeEventListener('resize', hideMenu);
     }
   })
+  // /////////////////////////////////
   return (
     <Layout>
       <Navbar toggle={toggle} />
