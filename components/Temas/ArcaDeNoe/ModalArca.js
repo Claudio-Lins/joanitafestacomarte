@@ -38,7 +38,7 @@ export const ModalArca = ({ showModal, setShowModal }) => {
         <div
           ref={modalRef}
           onClick={closeModal}
-          className="flex inset-0 absolute justify-center items-center p-8 bg-black min-h-screen min-w-full z-50"
+          className="flex inset-0 absolute justify-center items-center p-8 bg-black min-h-screen min-w-full bg-opacity-90 z-50"
         >
           <animated.div style={animation}>
             <div
