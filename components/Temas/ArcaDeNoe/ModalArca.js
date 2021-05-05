@@ -38,14 +38,14 @@ export const ModalArca = ({ showModal, setShowModal }) => {
         <div
           ref={modalRef}
           onClick={closeModal}
-          className="flex inset-0 absolute justify-center items-center p-8 bg-black min-h-screen min-w-full bg-opacity-90 z-50"
+          className="flex inset-0 absolute justify-center items-center p-8 bg-black min-h-screen min-w-full"
         >
           <animated.div style={animation}>
             <div
               showModal={showModal}
               className="flex justify-center items-center"
             >
-              <div className="text-5xl text-gray-50 z-150">
+              <div className="text-5xl text-gray-50">
                   Conteudo
               </div>
             </div>
