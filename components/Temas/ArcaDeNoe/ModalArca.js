@@ -45,7 +45,7 @@ export const ModalArca = ({ showModal, setShowModal }) => {
               showModal={showModal}
               className="flex justify-center items-center"
             >
-              <div className="text-5xl text-white">
+              <div className="text-5xl text-gray-50 z-150">
                   Conteudo
               </div>
             </div>
