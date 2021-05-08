@@ -54,7 +54,7 @@ export default QuemSomos;
 
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://localhost:1337/quem-somos`)
+  const res = await fetch(`https://joanita-api.herokuapp.com/quem-somos`)
   const quemSomos = await res.json()
 
 
