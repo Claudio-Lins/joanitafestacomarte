@@ -28,7 +28,7 @@ const Navbar = ({ toggle }) => {
               height={25}
             />
           </div>
-          <div className="flex pr-8 space-x-4 font-Nunito font-semibold md:block hidden">
+          <div className="flex pr-8 space-x-8 font-Nunito font-semibold md:block hidden">
             <Link href="/">
               <a className=" inline-block hover:text-red-900 hover:font-bold">
                 Home
