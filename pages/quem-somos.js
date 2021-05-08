@@ -9,7 +9,7 @@ const QuemSomos = ({quemSomos}) => {
         <link rel="icon" href="/assets/joaninha-512.ico" />
       </Head>
 
-      <div className="min-w-full pt-16 container md:p-4">
+      <div className=" min-h-screen pt-16 md:p-4 items-center flex">
         <div className="relative bg-white mb-10 mx-auto items-center md:grid md:grid-cols-2 lg:w-2/4 md:border md:mt-20 md:rounded-xl md:shadow-md  overflow-hidden">
           <div className="">
             <div className="flex justify-center mt-4">
