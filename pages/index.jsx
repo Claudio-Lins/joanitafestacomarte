@@ -4,9 +4,9 @@ import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
 import { fetchAPIJoanita } from "../lib/api";
-import { ModalArca } from "../components/Temas/ArcaDeNoe/ModalArca";
+import Temas from '../components/Temas/Temas'
 
-export default function Home({ depoimentos, image }) {
+export default function Home({ depoimentos, image, temas }) {
   ///////MODAL////////////////////////////////
   const [showModal, setShowModal] = useState(false);
 
@@ -28,6 +28,10 @@ export default function Home({ depoimentos, image }) {
       <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
+      
+      <div className="mt-2 md:flex w-full h-auto justify-center lg:h-[700px] bg-white">
+        <Temas temas={temas} />
+      </div>
 
       
     </div>
@@ -36,13 +40,14 @@ export default function Home({ depoimentos, image }) {
 
 ////////////////////////////////////////////////////////////////
 export async function getStaticProps() {
-  const [depoimentos, image] = await Promise.all([
+  const [depoimentos, image, temas] = await Promise.all([
     fetchAPIJoanita("/depoimentos"),
     fetchAPIJoanita("/destaks"),
+    fetchAPIJoanita("/temas"),
   ]);
 
   return {
-    props: { depoimentos, image },
+    props: { depoimentos, image, temas },
     revalidate: 1,
   };
 }

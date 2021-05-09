@@ -39,6 +39,11 @@ const Navbar = ({ toggle }) => {
                 Quem Somos
               </a>
             </Link>
+            <Link href="/depoimentos">
+              <a className=" inline-block hover:text-red-900 hover:font-bold">
+                Depoimentos
+              </a>
+            </Link>
           </div>
           {/* <div className="flex pr-8 cursor-pointer">
             <Link href="https://www.instagram.com/joanitafestacomarte/">
