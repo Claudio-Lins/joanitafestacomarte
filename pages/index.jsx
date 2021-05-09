@@ -25,13 +25,14 @@ export default function Home({ depoimentos, image, temas }) {
         <DestakHome image={image} />
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
+      <div className="mt-12 md:flex w-full h-auto justify-center lg:h-[700px] bg-red-200">
+        <Temas temas={temas} />
+      </div>
+
+      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-white">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
       
-      <div className="mt-2 md:flex w-full h-auto justify-center lg:h-[700px] bg-white">
-        <Temas temas={temas} />
-      </div>
 
       
     </div>

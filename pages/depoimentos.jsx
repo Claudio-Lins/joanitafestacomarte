@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import FileUpload from "../components/Depoimentos/FileUpload";
 import FormDepoimentos from "../components/Depoimentos/FormDepoimentos";
 
 export default function Depoimentos() {
