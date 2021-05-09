@@ -29,23 +29,7 @@ export default function Home({ depoimentos, image }) {
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-white">
-        <div className="grid grid-cols-3 space-x-4 mx-auto">
-          <div className="">
-          <button
-            onClick={openModal}
-            className="bg-gray-100 px-4 py-2 rounded-md shadow-md"
-          >
-            <Image
-              src="/temas/arca-de-noe/arca-imagem.png"
-              width={100}
-              height={100}
-            />
-          </button>
-            <ModalArca showModal={showModal} setShowModal={setShowModal} />
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 }

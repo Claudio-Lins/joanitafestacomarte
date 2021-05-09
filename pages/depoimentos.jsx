@@ -34,22 +34,6 @@ export default function Depoimentos() {
           <div className="py-4">
             <FormDepoimentos />
           </div>
-
-          <div className="md:w-3/4 mx-auto">
-            <div className="text-center text-green-800 mt-4">
-              <div className="mb-6 mx-auto text-center text-red-800">
-                <Image
-                  src="/assets/008-woman-2.svg"
-                  alt="Joanita Festa com Arte"
-                  width={150}
-                  height={75}
-                />
-              </div>
-              <div className="py-4">
-                <FileUpload />
-              </div>
-            </div>
-          </div>
         </div>
         {/*  */}
       </div>
