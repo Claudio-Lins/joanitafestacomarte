@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
