@@ -3,34 +3,48 @@ import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
 
+const calculatePercent = (value, total) => Math.round(value / total * 100);
+
 export default function Depoimentos() {
   ////////////////////////////////
   const [state, setState] = useState('');
+  const [percent, setPercent] = useState('');
   
   const handleChange = (event) => {
   
   const state = {
-    file: null
+    file: null,
+    percent: 0
   }
 
     console.log("Depoimentos.handleChange event.target.files", event.target.files);
     setState({ file: event.target.files[0]})
+
+    const {percent} = state
+    console.log('ImageUpload.render percent', percent)
+    
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    
     console.log("ImageUpload.handleSubmit state.file", state.file);
-
+    
     const data = new FormData()
     data.append('files', state.file)
-
+    
     const upload_res = await axios({
       method: 'POST',
-      url: "https://joanita-api.herokuapp.com/upload",
-      data
+      // url: "https://joanita-api.herokuapp.com/upload",
+      url: "http://localhost:1337/upload",
+      data,
+      onUploadProgress: (progress) => setState({percent: calculatePercent(progress.loaded, progress.total)}),
+      
     })
+    console.log("ImageUpload.handleSubmit upload_res", upload_res)
+    
+    
+    
   };
-
   ////////////////////////////////
   return (
     <>
