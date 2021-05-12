@@ -1,7 +1,37 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Depoimentos() {
+  ////////////////////////////////
+  const [state, setState] = useState('');
+  
+  const handleChange = (event) => {
+  
+  const state = {
+    file: null
+  }
+
+    console.log("Depoimentos.handleChange event.target.files", event.target.files);
+    setState({ file: event.target.files[0]})
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    console.log("ImageUpload.handleSubmit state.file", state.file);
+
+    const data = new FormData()
+    data.append('files', state.file)
+
+    const upload_res = await axios({
+      method: 'POST',
+      url: "https://joanita-api.herokuapp.com/upload",
+      data
+    })
+  };
+
+  ////////////////////////////////
   return (
     <>
       <Head>
@@ -30,7 +60,10 @@ export default function Depoimentos() {
             />
           </div>
           <div className="py-4">
-            <form className="w-full space-y-2 md:space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full space-y-2 md:space-y-4"
+            >
               <div className="flex items-center justify-between pl-3 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <input
                   type="text"
@@ -50,14 +83,15 @@ export default function Depoimentos() {
               </div>
 
               <div className="">
-              <div className=' pl-3 text-red-800 text-sm'>Enviar Foto</div>
-              <div className="flex  pl-3 pt-3 pb-0 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                <input
-                  type="file"
-                  name="email"
-                  className="text-sm font-light outline-none h-12 w-11/12 text-red-800 placeholder-red-800"
-                />
-              </div>
+                <div className=" pl-3 text-red-800 text-sm">Enviar Foto</div>
+                <div className="flex  pl-3 pt-3 pb-0 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                  <input
+                    onChange={handleChange}
+                    type="file"
+                    name="file"
+                    className="text-sm font-light outline-none h-12 w-11/12 text-red-800 placeholder-red-800"
+                  />
+                </div>
               </div>
 
               <div className="flex items-center justify-between pl-3 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
@@ -70,6 +104,7 @@ export default function Depoimentos() {
 
               <div className="bg-red-800 rounded-lg py-2">
                 <button
+                onClick={handleSubmit}
                   className="w-full text-base font-Nunito text-white tracking-wider hover:font-bold hover:text-xl"
                   type="button"
                 >
