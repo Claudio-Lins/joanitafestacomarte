@@ -1,50 +1,83 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
-const calculatePercent = (value, total) => Math.round(value / total * 100);
+const calculatePercent = (value, total) => Math.round((value / total) * 100);
 
 export default function Depoimentos() {
-  ////////////////////////////////
-  const [state, setState] = useState('');
-  const [percent, setPercent] = useState('');
-  
-  const handleChange = (event) => {
-  
-  const state = {
-    file: null,
-    percent: 0
-  }
+  const router = useRouter();
+  //UPLOAD FILE //////////////////////////////
+  const [state, setState] = useState("");
+  const [percent, setPercent] = useState("");
 
-    console.log("Depoimentos.handleChange event.target.files", event.target.files);
-    setState({ file: event.target.files[0]})
+  const handleChange = (event, path) => {
+    const state = {
+      file: null,
+      percent: 0,
+    };
 
-    const {percent} = state
-    console.log('ImageUpload.render percent', percent)
-    
+    console.log(
+      "Depoimentos.handleChange event.target.files",
+      event.target.files
+    );
+    setState({ file: event.target.files[0] });
+
+    const { percent } = state;
+    console.log("ImageUpload.render percent", percent);
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     console.log("ImageUpload.handleSubmit state.file", state.file);
-    
-    const data = new FormData()
-    data.append('files', state.file)
-    
+
+    const data = new FormData();
+    data.append("files", state.file);
+
     const upload_res = await axios({
-      method: 'POST',
+      method: "POST",
       // url: "https://joanita-api.herokuapp.com/upload",
       url: "http://localhost:1337/upload",
       data,
-      onUploadProgress: (progress) => setState({percent: calculatePercent(progress.loaded, progress.total)}),
-      
-    })
-    console.log("ImageUpload.handleSubmit upload_res", upload_res)
-    
-    
-    
+      onUploadProgress: (progress) =>
+        setState({
+          percent: calculatePercent(progress.loaded, progress.total),
+        }),
+    });
+    console.log("ImageUpload.handleSubmit upload_res", upload_res);
+    //UPLOAD DADOS //////HANDLESUBMIT////////////////////////
+    const depoimentoInfo = {
+      nome: depoimentoNome,
+      slug: depoimentoNome.toLowerCase().replace(/\s/g, ""),
+      email: depoimentoEmail,
+      mensagem: depoimentoMensagem,
+    };
+
+    const add = await fetch("http://localhost:1337/depoimentos", {
+      method: "POST",
+      headers: {
+        Accept: "apllication/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(depoimentoInfo),
+    });
+    const addResponse = await add.json();
+    console.log(addResponse);
+
+    apagar();
   };
+
+  const apagar = () => {
+    console.log("Funciona");
+  };
+  ////////////////////////////////
+  //UPLOAD DADOS //////////////////////////////
+  const [depoimentoNome, setDepoimentoNome] = useState("");
+  const [depoimentoEmail, setDepoimentoEmail] = useState("");
+  const [depoimentoMensagem, setDepoimentoMensagem] = useState("");
+
   ////////////////////////////////
   return (
     <>
@@ -81,6 +114,8 @@ export default function Depoimentos() {
               <div className="flex items-center justify-between pl-3 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <input
                   type="text"
+                  onChange={(e) => setDepoimentoNome(e.target.value)}
+                  value={depoimentoNome}
                   name="nome"
                   className="text-sm font-light outline-none h-12 w-11/12 text-red-800 placeholder-red-800"
                   placeholder="Nome"
@@ -90,6 +125,8 @@ export default function Depoimentos() {
               <div className="flex items-center justify-between pl-3 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <input
                   type="email"
+                  onChange={(e) => setDepoimentoEmail(e.target.value)}
+                  value={depoimentoEmail}
                   name="email"
                   className="text-sm font-light outline-none h-12 w-11/12 text-red-800 placeholder-red-800"
                   placeholder="E-mail"
@@ -110,6 +147,8 @@ export default function Depoimentos() {
 
               <div className="flex items-center justify-between pl-3 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <textarea
+                  onChange={(e) => setDepoimentoMensagem(e.target.value)}
+                  value={depoimentoMensagem}
                   name="mensage"
                   className="text-sm font-light outline-none h-24 w-full py-2 text-red-800 placeholder-red-800"
                   placeholder="Mensagem"
@@ -118,7 +157,7 @@ export default function Depoimentos() {
 
               <div className="bg-red-800 rounded-lg py-2">
                 <button
-                onClick={handleSubmit}
+                  onClick={(event) => handleSubmit(event, "/")}
                   className="w-full text-base font-Nunito text-white tracking-wider hover:font-bold hover:text-xl"
                   type="button"
                 >

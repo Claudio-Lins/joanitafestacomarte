@@ -33,7 +33,7 @@ export default class FileUpload extends React.Component {
 
     const uploas_res = await axios({
       method: "POST",
-      url: "http://localhost:1337/admin/plugins/upload",
+      url: "http://localhost:1337/upload",
       // url: "https://joanita-api.herokuapp.com/upload",
       data,
       onUploadProgress: (progress) =>
