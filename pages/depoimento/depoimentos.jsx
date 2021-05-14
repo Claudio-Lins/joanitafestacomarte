@@ -39,7 +39,7 @@ export default function Depoimentos() {
     const upload_res = await axios({
       method: "POST",
       // url: "https://joanita-api.herokuapp.com/upload",
-      url: "https://joanita-api.herokuapp.com/upload",
+      url: "http://localhost:1337/upload",
       data,
       onUploadProgress: (progress) =>
         setState({
@@ -55,7 +55,7 @@ export default function Depoimentos() {
       mensagem: depoimentoMensagem,
     };
 
-    const add = await fetch("https://joanita-api.herokuapp.com/depoimentos", {
+    const add = await fetch("http://localhost:1337/testemunhos", {
       method: "POST",
       headers: {
         Accept: "apllication/json",
@@ -70,7 +70,7 @@ export default function Depoimentos() {
   };
 
   const apagar = () => {
-    console.log("Funciona");
+    alert("Funcionando");
   };
   ////////////////////////////////
   //UPLOAD DADOS //////////////////////////////
