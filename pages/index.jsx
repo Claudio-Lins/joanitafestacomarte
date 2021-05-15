@@ -30,7 +30,7 @@ export default function Home({ depoimentos, image, temas, articles }) {
         <Temas temas={temas} />
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center py-6 lg:h-[800px] bg-white">
+      <div className="mt-8 md:flex w-full h-auto justify-center py-6 lg:h-auto bg-white">
         <Post articles={articles} />
         <PostMob articles={articles} />
       </div>

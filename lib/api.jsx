@@ -22,7 +22,7 @@
 // ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 export function getURLAPIJoanita(path = "") {
-    return `${process.env.API_URL_JOANITA || "http://localhost:1337"}${path}`;
+    return `${process.env.API_URL_JOANITA || "https://joanita-api.herokuapp.com"}${path}`;
   }
   export async function fetchAPIJoanita(path) {
     const requestUrl = getURLAPIJoanita(path);
