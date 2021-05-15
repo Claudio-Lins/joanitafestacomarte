@@ -3,9 +3,11 @@ import Head from "next/head";
 import DepoimentosSlideMobile from "../components/DepoimentosSlideMobile";
 import DestakHome from "../components/DestakHome";
 import { fetchAPIJoanita } from "../lib/api";
-import Temas from '../components/Temas/Temas'
+import Temas from "../components/Temas/Temas";
+import Post from "../components/Blog/Post";
+import PostMob from "../components/Blog/PostMob";
 
-export default function Home({ depoimentos, image, temas }) {
+export default function Home({ depoimentos, image, temas, articles }) {
   ///////MODAL////////////////////////////////
   const [showModal, setShowModal] = useState(false);
 
@@ -28,26 +30,29 @@ export default function Home({ depoimentos, image, temas }) {
         <Temas temas={temas} />
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-white">
+      <div className="mt-8 md:flex w-full h-auto justify-center py-6 lg:h-[800px] bg-white">
+        <Post articles={articles} />
+        <PostMob articles={articles} />
+      </div>
+
+      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
         <DepoimentosSlideMobile depoimentos={depoimentos} />
       </div>
-      
-
-      
     </div>
   );
 }
 
 ////////////////////////////////////////////////////////////////
 export async function getStaticProps() {
-  const [depoimentos, image, temas] = await Promise.all([
+  const [depoimentos, image, temas, articles] = await Promise.all([
     fetchAPIJoanita("/depoimentos"),
     fetchAPIJoanita("/destaks"),
     fetchAPIJoanita("/temas"),
+    fetchAPIJoanita("/articles"),
   ]);
 
   return {
-    props: { depoimentos, image, temas },
+    props: { depoimentos, image, temas, articles },
     revalidate: 1,
   };
 }
