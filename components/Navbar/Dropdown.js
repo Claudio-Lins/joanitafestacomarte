@@ -13,7 +13,8 @@ const Dropdown = ({ isOpen, toggle }) => {
     >
       <Link  href="/">Home</Link>
       <Link href="/quem-somos">Quem Somos</Link>
-      <Link href="/depoimentos">Depoimentos</Link>
+      <Link href="/depoimento/depoimentos">Depoimentos</Link>
+      <Link href="/blog">Blog </Link>
     </div>
   );
 };

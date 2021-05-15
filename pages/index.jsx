@@ -48,7 +48,7 @@ export async function getStaticProps() {
     fetchAPIJoanita("/depoimentos"),
     fetchAPIJoanita("/destaks"),
     fetchAPIJoanita("/temas"),
-    fetchAPIJoanita("/articles"),
+    fetchAPIJoanita("/articles")
   ]);
 
   return {

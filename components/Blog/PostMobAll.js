@@ -2,16 +2,16 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 
-export default function PostMob({ articles }) {
+export default function PostMobAll({ articles }) {
   return (
     <>
       <div className="sm:hidden">
         <div className=" font-Lobster text-5xl mb-12 text-red-800 text-center">
           <h1>Blog da Joanita</h1>
         </div>
-        <div className="md:grid lg:grid-cols-3 container px-4 mx-auto">
+        <div className="md:grid lg:grid-cols-3 container px-4 pb-16 mx-auto">
           {articles &&
-            articles.slice(0, 1).map((articles) => (
+            articles.map((articles) => (
               <div>
                 <Link href={`/${articles.slug}`} key={articles.id}>
                   <a>
