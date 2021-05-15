@@ -8,16 +8,16 @@ export default function PostAll({ articles }) {
         <div className="font-Lobster text-5xl mt-4 text-red-800 text-center">
           <h1>Blog da Joanita</h1>
         </div>
-        <div className="md:grid lg:grid-cols-3 container px-4 mx-auto space-x-6">
+        <div className="md:grid lg:grid-cols-3 px-4 mx-auto space-x-6">
           {articles &&
             articles.map((articles) => (
               <div>
                 <Link href={`/${articles.slug}`} key={articles.id}>
                   <a>
-                    <div className="flex max-w-xl mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
+                    <div className="flex max-w-md mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
                       <div className="flex items-center w-full">
                         <div className="w-full">
-                          <div className="text-sm mb-7 mt-6 mx-3 px-2">
+                          <div className=" mt-6 mx-3 px-2">
                             <Image
                               src={articles.image.url}
                               alt=""

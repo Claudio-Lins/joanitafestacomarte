@@ -9,17 +9,17 @@ export default function PostMobAll({ articles }) {
         <div className=" font-Lobster text-5xl mb-12 text-red-800 text-center">
           <h1>Blog da Joanita</h1>
         </div>
-        <div className="md:grid lg:grid-cols-3 container px-4 pb-16 mx-auto">
+        <div className="md:grid lg:grid-cols-3 px-4 pb-16 mx-auto">
           {articles &&
             articles.map((articles) => (
               <div>
                 <Link href={`/${articles.slug}`} key={articles.id}>
                   <a>
-                    <div className="flex max-w-xl mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
+                    <div className="flex max-w-sm mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
                       
                       <div className="flex items-center w-full">
                         <div className="w-full">
-                          <div className="text-sm mb-7 mt-6 mx-3 px-2">
+                          <div className="mb-2 mt-6 mx-3 px-2">
                             <Image
                               src={articles.image.url}
                               alt=""
