@@ -31,6 +31,8 @@ export default function Depoimentos() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    router.push('/')
+
     console.log("ImageUpload.handleSubmit state.file", state.file);
 
     const data = new FormData();
@@ -66,11 +68,11 @@ export default function Depoimentos() {
     const addResponse = await add.json();
     console.log(addResponse);
 
-    apagar();
+    obrigado();
   };
 
-  const apagar = () => {
-    
+  const obrigado = () => {
+    alert('Obrigado pelo seu depoimento!')
   };
   ////////////////////////////////
   //UPLOAD DADOS //////////////////////////////
@@ -157,7 +159,7 @@ export default function Depoimentos() {
 
               <div className="bg-red-800 rounded-lg py-2">
                 <button
-                  onClick={(event) => handleSubmit(event, "/")}
+                  onClick={(event) => handleSubmit(event)}
                   className="w-full text-base font-Nunito text-white tracking-wider hover:font-bold hover:text-xl"
                   type="button"
                 >
