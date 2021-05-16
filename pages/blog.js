@@ -10,7 +10,7 @@ export default function Blog({ articles }) {
     <>
       <div className="pt-16">
         <Head>
-          <title>RedeSF - Blog</title>
+          <title>Blog - Joanita Festa com Arte</title>
         </Head>
         <div className="relative mt-3 md:py-0">
           <div>
