@@ -6,9 +6,7 @@ export default function Post({ articles }) {
   return (
     <>
       <div className="hidden sm:flex flex-col justify-center">
-        <div className="font-Lobster text-5xl mt-4 text-red-800 text-center">
-          <h1>Blog da Joanita</h1>
-        </div>
+        
         <div className="md:grid lg:grid-cols-3 px-4 mx-auto space-x-6">
           {articles &&
             articles.slice(0, 3).map((articles) => (

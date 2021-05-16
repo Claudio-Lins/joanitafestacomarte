@@ -6,9 +6,7 @@ export default function PostMob({ articles }) {
   return (
     <>
       <div className="sm:hidden">
-        <div className=" font-Lobster text-5xl mb-12 text-red-800 text-center">
-          <h1>Blog da Joanita</h1>
-        </div>
+        
         <div className="md:grid lg:grid-cols-3 px-4 mx-auto">
           {articles &&
             articles.slice(0, 1).map((articles) => (

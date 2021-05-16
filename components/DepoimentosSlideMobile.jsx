@@ -30,11 +30,11 @@ const DepoimentosSlideMobile = ({depoimentos}) => {
     <>
       <section className="relative flex flex-col justify-center items-center">
         <FaArrowAltCircleLeft
-          className="absolute  flex text-3xl text-gray-200 left-2 md:-left-2 mt-9 z-10 cursor-pointer hover:text-red-800"
+          className="absolute flex text-3xl text-gray-200 left-2 md:-left-2 mt-0 z-10 cursor-pointer hover:text-red-800"
           onClick={prevSlide}
         />
         <FaArrowAltCircleRight
-          className="absolute  flex text-3xl text-gray-200 right-2 md:-right-2 mt-9 z-10 cursor-pointer hover:text-red-800"
+          className="absolute  flex text-3xl text-gray-200 right-2 md:-right-2 mt-0 z-10 cursor-pointer hover:text-red-800"
           onClick={nextSlide}
         />
 
@@ -43,21 +43,18 @@ const DepoimentosSlideMobile = ({depoimentos}) => {
             <>
               <div
                 className={
-                  index === current ? "p-4" : " opacity-0 duration-[1s ease]"
+                  index === current ? "p-8" : " opacity-0 duration-[1s ease]"
                 }
                 key={index}
               >
                 {index === current && (
                   <>
-                    <div className="flex flex-col justify-center mt-10">
-                      <div className="font-Lobster text-5xl lg:text-6xl text-center">
-                        <h2>Depoimentos</h2>
-                      </div>
-                      <div className="py-4 px-7 md:flex md:container justify-evenly mx-auto">
+                    <div className="flex flex-col justify-center">
+                      <div className="px-7 md:flex md:container justify-evenly mx-auto">
                         <div className="max-w-md py-2 px-4 bg-white shadow-lg rounded-lg my-20">
                           <div className="flex justify-center md:justify-center -mt-16">
                             <Image
-                              className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
+                              className="w-20 h-20 object-cover rounded-full border-2"
                               src={depoimentos.picture.url}
                               width={100}
                               height={100}
@@ -76,22 +73,6 @@ const DepoimentosSlideMobile = ({depoimentos}) => {
                     </div>
                   </>
                 )}
-              </div>
-            </>
-          );
-        })}
-      </section>
-      <section className="relative flex flex-col justify-center items-center">
-        {depoimentos.map((depoimentos, index) => {
-          return (
-            <>
-              <div
-                className={
-                  index === current ? "p-4" : " opacity-0 duration-[1s ease]"
-                }
-                key={index}
-              >
-                {index === current && <></>}
               </div>
             </>
           );

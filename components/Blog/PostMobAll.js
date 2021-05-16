@@ -6,16 +6,14 @@ export default function PostMobAll({ articles }) {
   return (
     <>
       <div className="sm:hidden">
-        <div className=" font-Lobster text-5xl mb-12 text-red-800 text-center">
-          <h1>Blog da Joanita</h1>
-        </div>
+        
         <div className="md:grid lg:grid-cols-3 px-4 pb-16 mx-auto">
           {articles &&
             articles.map((articles) => (
               <div>
                 <Link href={`/${articles.slug}`} key={articles.id}>
                   <a>
-                    <div className="flex max-w-sm mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
+                    <div className="flex max-w-sm bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
                       
                       <div className="flex items-center w-full">
                         <div className="w-full">

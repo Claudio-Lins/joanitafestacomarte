@@ -30,13 +30,24 @@ export default function Home({ depoimentos, image, temas, articles }) {
         <Temas temas={temas} />
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center py-6 lg:h-auto bg-white">
-        <Post articles={articles} />
-        <PostMob articles={articles} />
+      <div className="flex flex-col w-full h-auto justify-center py-8 lg:h-auto bg-white">
+        <div className="flex justify-center font-Lobster text-5xl text-red-800">
+          <h1>Blog da Joanita</h1>
+        </div>
+        <div className="">
+          <Post articles={articles} />
+          <PostMob articles={articles} />
+        </div>
       </div>
 
-      <div className="mt-8 md:flex w-full h-auto justify-center items-center lg:h-[700px] bg-red-200">
+      <div className="flex flex-col w-full h-auto justify-center items-center py-8 bg-red-200">
+      <div className=" justify-center font-Lobster text-5xl text-red-800">
+          <h1>Blog da Joanita</h1>
+        </div>
+        <div>
+
         <DepoimentosSlideMobile depoimentos={depoimentos} />
+        </div>
       </div>
     </div>
   );
@@ -48,7 +59,7 @@ export async function getStaticProps() {
     fetchAPIJoanita("/depoimentos"),
     fetchAPIJoanita("/destaks"),
     fetchAPIJoanita("/temas"),
-    fetchAPIJoanita("/articles")
+    fetchAPIJoanita("/articles"),
   ]);
 
   return {
