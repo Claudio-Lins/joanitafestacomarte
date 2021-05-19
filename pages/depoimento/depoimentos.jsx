@@ -31,7 +31,7 @@ export default function Depoimentos() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    router.push('/')
+    router.push('/thanks/depoimento')
 
     console.log("ImageUpload.handleSubmit state.file", state.file);
 
@@ -68,12 +68,9 @@ export default function Depoimentos() {
     const addResponse = await add.json();
     console.log(addResponse);
 
-    obrigado();
   };
 
-  const obrigado = () => {
-    alert('Obrigado pelo seu depoimento!')
-  };
+  
   ////////////////////////////////
   //UPLOAD DADOS //////////////////////////////
   const [depoimentoNome, setDepoimentoNome] = useState("");

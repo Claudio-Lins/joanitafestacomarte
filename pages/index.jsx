@@ -30,7 +30,7 @@ export default function Home({ depoimentos, image, temas, articles }) {
         <Temas temas={temas} />
       </div>
 
-      <div className="flex flex-col w-full h-auto justify-center py-8 lg:h-auto bg-white">
+      <div className="flex flex-col w-full h-auto justify-center py-12 lg:h-auto bg-white">
         <div className="flex justify-center font-Lobster text-5xl text-red-800">
           <h1>Blog da Joanita</h1>
         </div>
@@ -40,9 +40,9 @@ export default function Home({ depoimentos, image, temas, articles }) {
         </div>
       </div>
 
-      <div className="flex flex-col w-full h-auto justify-center items-center py-8 bg-red-200">
+      <div className="flex flex-col w-full h-auto justify-center items-center pt-12 bg-red-200">
       <div className=" justify-center font-Lobster text-5xl text-red-800">
-          <h1>Blog da Joanita</h1>
+          <h1>Depoimentos</h1>
         </div>
         <div>
 
