@@ -54,8 +54,8 @@ const DestakHome = ({image}) => {
                         className="rounded-lg object-cover"
                         src={image.Cover.url}
                         alt={image.Title}
-                        width={680}
-                        height={680}
+                        width={700}
+                        height={700}
                       />
                     </div>
                   </>
