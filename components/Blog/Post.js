@@ -19,7 +19,7 @@ export default function Post({ articles }) {
                           <div className="mt-6 mx-3 px-2">
                             <Image
                               src={articles.image.url}
-                              alt=""
+                              alt={articles.title}
                               layout="responsive"
                               width={articles.image.width}
                               height={articles.image.height}
