@@ -10,7 +10,7 @@ export default function PostAll({ articles }) {
           {articles &&
             articles.map((articles) => (
               <div>
-                <Link href={`/${articles.slug}`} key={articles.id}>
+                <Link href={`post/${articles.slug}`} key={articles.id}>
                   <a>
                     <div className="flex max-w-md mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
                       <div className="flex items-center w-full">
@@ -25,7 +25,7 @@ export default function PostAll({ articles }) {
                               objectFit="cover"
                             />
                           </div>
-                          <div className="text-gray-900 font-semibold text-lg mb-2 mx-3 px-2">
+                          <div className="text-gray-900 font-semibold text-lg mb-0 m-3 px-2">
                             {articles.title}
                           </div>
                           <div className="text-gray-800 font-thin text-sm mb-6 mx-3 px-2">

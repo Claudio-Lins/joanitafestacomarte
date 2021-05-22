@@ -11,7 +11,7 @@ export default function Post({ articles }) {
           {articles &&
             articles.slice(0, 3).map((articles) => (
               <div>
-                <Link href={`/${articles.slug}`} key={articles.id}>
+                <Link href={`post/${articles.slug}`} key={articles.id}>
                   <a>
                     <div className="flex max-w-md mt-10 bg-white shadow-lg border rounded-lg overflow-hidden mx-auto">
                       <div className="flex items-center w-full">

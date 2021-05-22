@@ -23,7 +23,7 @@ export default function Blog({ articles }) {
               layout="responsive"
             />
           </div>
-          <div className="absolute top-0 bg-black bg-opacity-30 w-full h-full flex items-center justify-center">
+          <div className="absolute top-0  w-full h-full flex items-center justify-center">
             <div className=" text-gray-50 text-xl xl:text-7xl text-center font-Lobster tracking-wide">
               Blog - Joanita Festa com Arte
             </div>
