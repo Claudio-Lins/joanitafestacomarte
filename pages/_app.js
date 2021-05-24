@@ -1,36 +1,35 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
-import Navbar from "../components/Navbar/Navbar"
-import Dropdown from '../components/Navbar/Dropdown';
+import Navbar from "../components/Navbar/Navbar";
+import Dropdown from "../components/Navbar/Dropdown";
 import Footer from "../components/Footer";
 
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  
   // NAV BAR //////////////////////////////////
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => { 
+  const toggle = () => {
     setIsOpen(!isOpen);
-  }
+  };
   useEffect(() => {
     const hideMenu = () => {
-      if(window.innerWidth > 768 && isOpen) {
+      if (window.innerWidth > 768 && isOpen) {
         setIsOpen(false);
-        console.log("Resizzzzze")
+        console.log("Resizzzzze");
       }
-    }
-    window.addEventListener('resize', hideMenu);
+    };
+    window.addEventListener("resize", hideMenu);
 
-    return() => {
-      window.removeEventListener('resize', hideMenu);
-    }
-  })
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
+  });
   // /////////////////////////////////
   return (
     <Layout>
       <Navbar toggle={toggle} />
-    <Dropdown isOpen={isOpen} toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
       <Component {...pageProps} />
       <Footer />
     </Layout>
