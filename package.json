@@ -16,6 +16,7 @@
     "react-icons": "^4.2.0",
     "react-json-pretty": "^2.2.0",
     "react-script": "^2.0.5",
+    "react-slideshow-image": "^3.4.6",
     "react-spring": "^9.0.0-rc.3"
   },
   "devDependencies": {
