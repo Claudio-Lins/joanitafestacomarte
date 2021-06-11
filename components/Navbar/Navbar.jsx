@@ -39,7 +39,7 @@ const Navbar = ({ toggle }) => {
                 Quem Somos
               </a>
             </Link>
-            <Link href="/depoimento/depoimentos">
+            <Link href="/depoimento/">
               <a className=" inline-block hover:text-red-900 hover:font-bold">
                 Depoimentos
               </a>

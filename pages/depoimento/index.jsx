@@ -133,7 +133,7 @@ export default function Depoimentos() {
               </div>
 
               <div className="">
-                <div className=" pl-3 text-red-800 text-sm">Enviar Foto</div>
+                <div className=" pl-3 text-red-800 text-sm">Sua Foto</div>
                 <div className="flex  pl-3 pt-3 pb-0 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                   <input
                     onChange={handleChange}
